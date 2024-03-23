@@ -9,7 +9,7 @@ export default function RefectorPointer() {
     function handleOnMouseMon(event) {
         // console.dir(event)
         setPosition({
-            ...position,
+            // ...position,
             x:event.clientX,
             y:event.clientY
         })

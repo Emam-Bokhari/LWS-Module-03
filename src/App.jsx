@@ -1,6 +1,7 @@
 import { Fragment } from "react";
+import Form from "./components/Module-3.6/Form";
 // import RefectorPointer from "./components/Module-3.4/RefectorPointer";
-import Form from "./components/Module-3.4/Form";
+// import Form from "./components/Module-3.4/Form";
 // import Form from "./components/Module-3.2/Form";
 
 export default function App() {
@@ -14,6 +15,8 @@ export default function App() {
       ))} */}
 
       {/* <RefectorPointer /> */}
+
+      {/* <Form /> */}
 
       <Form />
 
