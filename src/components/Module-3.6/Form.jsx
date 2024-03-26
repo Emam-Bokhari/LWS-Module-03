@@ -33,7 +33,6 @@ export default function Form() {
 
                 <p className="mt-2" >You ticket will be issued in: <span className="text-red-500 font-medium" >{fullName}</span></p>
 
-
             </div>
         </Fragment>
     )
