@@ -10,6 +10,22 @@ export default function Travel() {
     const root = plan[0]
     const planetIds = root.childIds
     // console.log(root,planets)
+
+    function handleComplete(parentId, childId) {
+        const parent = plan[parentId]
+        // console.log(parentId, childId, parent)
+
+        const nexParent = {
+            ...parent,
+            childIds: parent.childIds.filter((id )=> id !== childId)
+        }
+
+        setPlan({
+            ...plan,
+            [parentId]:nexParent
+        })
+    }
+
     return (
         <Fragment>
 
@@ -17,9 +33,14 @@ export default function Travel() {
                 Places to visit
             </h2>
 
-            <ol>
+            <ol className="list-decimal list-inside ml-5" >
                 {planetIds.map((placeId) => (
-                    <PlaceTree key={placeId} id={placeId} placesById={plan} />
+                    <PlaceTree
+                        key={placeId}
+                        id={placeId}
+                        placesById={plan}
+                        onComplete={handleComplete}
+                        parentId={0} />
                 ))}
             </ol>
 
