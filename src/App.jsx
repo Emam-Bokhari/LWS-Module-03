@@ -1,10 +1,10 @@
 import { Fragment } from "react";
-import Scoreboard from "./components/Module-3.11/Scoreboard";
+import ScoreboardKey from "./components/Module-3.11/ScoreboardKey";
 
 export default function App() {
   return (
     <Fragment>
-      <Scoreboard />
+      <ScoreboardKey />
     </Fragment>
   )
 }
